@@ -71,29 +71,12 @@ blockquote.kg-blockquote-alt {
 
 .kg-canvas {
     display: grid;
-    /* grid-template-columns:
-        [full-start]
-        minmax(5vw, auto)
-        [wide-start]
-        minmax(auto, 100px)
-        [main-start]
-        min(720px, calc(100% - 10vw))
-        [main-end]
-        minmax(auto, 100px)
-        [wide-end]
-        minmax(5vw, auto)
-        [full-end]; */
-
     grid-template-columns:
-        [full-start] 
-        minmax(4vw,auto) 
-        [wide-start] 
-        minmax(auto,290px) 
-        [main-start] min(720px,calc(100% - 8vw)) 
-        [main-end] 
-        minmax(auto,290px) 
-        [wide-end] 
-        minmax(4vw,auto) 
+        [full-start] minmax(4vw,auto) 
+        [wide-start] minmax(auto,240px) 
+        [main-start] min(640px,calc(100% - 8vw)) 
+        [main-end] minmax(auto,240px) 
+        [wide-end] minmax(4vw,auto) 
         [full-end];
 }
 
@@ -107,4 +90,8 @@ blockquote.kg-blockquote-alt {
 
 .kg-width-full {
     grid-column: full-start/full-end;
+}
+
+.kg-width-full img {
+    width: 100%;
 }

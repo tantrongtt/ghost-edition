@@ -2,6 +2,9 @@
 created within the Ghost editor. The main content handles
 headings, text, images and lists. We deal with cards lower down. */
 
+.gh-content {
+    position: relative;
+}
 /* Default vertical spacing */
 .gh-content > * + * {
     margin-top: 2.8rem;
