@@ -1,0 +1,109 @@
+<article class="single {{post_class}}">
+    <header class="single-header kg-canvas">
+        {{#is "post"}}
+            <div class="single-meta">
+                <span class="single-meta-item single-meta-date">
+                    <time datetime="{{date format="YYYY-MM-DD"}}">
+                        {{date published_at}}
+                    </time>
+                </span>
+
+                <span class="single-meta-item single-meta-length">
+                    {{reading_time}}
+                </span>
+
+                {{#primary_tag}}
+                    <span class="single-meta-item single-meta-tag">
+                        <a class="post-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a>
+                    </span>
+                {{/primary_tag}}
+            </div>
+        {{/is}}
+
+        <h1 class="single-title kg-width-wide">{{title}}</h1>
+
+        {{#if custom_excerpt}}
+            <div class="single-excerpt">
+                {{custom_excerpt}}
+            </div>
+        {{/if}}
+
+        {{#is "post"}}
+            <div class="single-footer-top">
+                <div class="author-list">
+                    {{#foreach authors}}
+                        <div class="author-image-placeholder u-placeholder square">
+                            <a href="{{url}}" title="{{name}}">
+                                {{#if profile_image}}
+                                    <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
+                                {{else}}
+                                    <span class="u-object-fit">{{> icons/avatar}}</span>
+                                {{/if}}
+                            </a>
+                        </div>
+                    {{/foreach}}
+                    <h4 class="author-name">by {{authors}}</h4>
+                </div>
+            </div>
+        {{/is}}
+
+        {{#if feature_image}}
+            {{#unless no_image}}
+                <figure class="single-media kg-width-{{width}}">
+                    <img srcset="{{> srcset}}" sizes="(min-width: 1023px) 920px, calc(90vw)" src="{{img_url feature_image size="l"}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+                    {{#if feature_image_caption}}
+                        <figcaption>{{feature_image_caption}}</figcaption>
+                    {{/if}}
+                </figure>
+            {{/unless}}
+        {{/if}}
+
+        {{#if no_image}}
+            <hr class="gh-content-line">
+        {{/if}}
+
+    </header>
+
+    <div class="single-content gh-content kg-canvas">
+        {{content}}
+    </div>
+
+    {{#is "post"}}
+        {{#unless @member}}
+            <div class="single-content gh-content kg-canvas">
+                <div class="single-content-subscription">
+                    {{#if @site.description}}
+                        <div class="single-content-subscription-title">
+                            {{#if @custom.email_signup_text}}
+                                {{@custom.email_signup_text}}
+                            {{else}}
+                                {{@site.description}}
+                            {{/if}}
+                        </div>
+                        <p>
+                            {{#if @custom.email_signup_desc}}
+                                {{@custom.email_signup_desc}}
+                            {{/if}}
+                        </p>
+                    {{/if}}
+
+                    <form class="form-wrapper cover-form" data-members-form>
+                        <input class="auth-email" type="email" data-members-email placeholder="Your email address" required="true" autocomplete="false">
+
+                        <button class="form-button" type="submit" aria-label="Submit">
+                            <span class="default">Subscribe</span>
+                            <span class="loader">{{> icons/loader}}</span>
+                            <span class="success">Email sent</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            {{#if @custom.show_author}}
+                {{> content-footer}}
+            {{else if @custom.show_share_links}}
+                {{> content-footer}}
+            {{/if}}
+        {{/unless}}
+    {{/is}}
+</article>

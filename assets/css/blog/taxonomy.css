@@ -1,0 +1,30 @@
+.taxonomy {
+    margin-bottom: 6vmin;
+}
+
+.taxonomy-media {
+    overflow: hidden;
+    margin: 0 auto 3rem;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.tag-list {
+    margin-top: 6rem;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.tag-list-label {
+    margin-right: 0.5rem;
+    color: var(--secondary-text-color);
+}
+
+.tag-list-item::before {
+    content: "#";
+}
+
+.tag-list-item + .tag-list-item {
+    margin-left: 1rem;
+}
+
