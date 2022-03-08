@@ -20,6 +20,7 @@
 @import "blog/related.css";
 @import "blog/comment.css";
 @import "blog/taxonomy.css";
+@import "blog/toc.css";
 @import "vendor/tiny-slider.css";
 @import "vendor/pswp.css";
 @import "misc/kg.css";

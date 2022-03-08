@@ -51,6 +51,13 @@ is the very first element in the post content */
     margin-top: 4.8rem;
 }
 
+.gh-content > hr {
+    border-color: var(--darker-gray-color);
+    display: block;
+    opacity: .1;
+    width: 100%;
+}
+
 /* Cards */
 .gh-content :not(.kg-card):not([id]) + .kg-card {
     margin-top: 4.8rem;

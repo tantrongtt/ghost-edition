@@ -10,6 +10,9 @@
     {{!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&display=swap"> --}}
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Montagu+Slab:wght@600&display=swap" rel="stylesheet">
 
+    {{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.css" /> --}}
+    {{!-- TOC --}}
+
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
     {{ghost_head}}
@@ -42,6 +45,18 @@
     </script>
 
     <script src="{{asset "built/main.min.js"}}"></script>
+
+    {{!-- TOC --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+    <script>
+        tocbot.init({
+            tocSelector: '.toc',
+            contentSelector: '.single-content',
+            headingSelector: 'h2',
+            hasInnerContainers: true,
+        });
+    </script>
+    {{!-- TOC --}}
 
     {{ghost_foot}}
 </body>

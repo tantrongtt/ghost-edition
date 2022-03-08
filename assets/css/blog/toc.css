@@ -1,0 +1,69 @@
+.kg-canvas .toc-container {
+    bottom: 0;
+    font-size: 1.4rem;
+    grid-column: wide-start/main-start;
+    grid-row-start: 1;
+    margin: 0;
+    padding: 0 8vmin 0 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.toc-sidebar {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 80px);
+    position: sticky;
+    top: 50px;
+}
+
+.toc {
+    align-self: stretch;
+    overflow-y: scroll;
+    padding: 1px 0 0;
+}
+
+.toc-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.toc-list-item {
+    font-size: 1.2rem;
+    margin-top: .8rem !important;
+}
+
+.toc-list-item.is-active-li a {
+    font-weight: 700;
+    color: var(--primary-text-color);
+}
+
+.toc-list-item a {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+}
+
+@media (max-width: 1190px) {
+
+    .kg-canvas .toc-container {
+        grid-column: main-start/main-end;
+        margin: 0 0 6vmin;
+        padding: 0;
+        position: static;
+    }
+
+    .kg-canvas .toc-sidebar {
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: 0 10px 50px rgb(25 37 52/14%),0 2px 5px rgb(25 37 52/3%);
+        overflow-y: scroll;
+        padding: 30px;
+        width: 100%;
+    }
+
+    .toc-list-item {
+        font-size: 1.6rem;
+    }
+}
