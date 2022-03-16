@@ -90,7 +90,21 @@
     width: 100%;
 }
 
-.cover-form input {
+.inline-form-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inline-form {
+    max-width: 480px;
+    width: 100%;
+}
+
+
+
+.cover-form input,
+.inline-form input {
     height: 50px;
 }
 
