@@ -65,6 +65,10 @@
                 "type": "text",
                 "group": "homepage"
             },
+            "email_signup_small": {
+                "type": "text",
+                "group": "homepage"
+            },
             "publication_cover_style": {
                 "type": "select",
                 "options": [

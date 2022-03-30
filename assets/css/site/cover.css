@@ -62,16 +62,26 @@
     margin-top: 1rem;
 }
 
+.cover-description-smalltext {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+    opacity: .8;
+    text-align: center;
+}
+
 .has-serif-title .cover-description {
     font-family: var(--font-serif);
 }
 
-.has-serif-body .cover-description-subtext {
+.has-serif-body .cover-description-subtext,
+.has-serif-body .cover-description-smalltext {
     font-family: var(--font-serif);
 }
 
 .with-full-cover .cover-description,
-.with-full-cover .cover-description-subtext {
+.with-full-cover .cover-description-subtext,
+.with-full-cover .cover-description-smalltext {
     color: #fff;
 }
 
