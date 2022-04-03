@@ -2,8 +2,8 @@
     {{#if related}}
         <section class="related-wrapper">
             <div class="container small">
-                <h3 class="related-title">You might also like...</h3>
-                <div class="post-feed related-feed">
+                <h3 class="related-title">Bài viết cùng chủ đề...</h3>
+                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} related-feed">
                     {{#foreach posts}}
                         {{> "loop"}}
                     {{/foreach}}

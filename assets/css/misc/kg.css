@@ -46,6 +46,10 @@ blockquote.kg-blockquote-alt {
     margin-right: 0;
 }
 
+.has-serif-title .kg-canvas > blockquote.kg-blockquote-alt  {
+    font-family: var(--font-serif);
+}
+
 @media (max-width: 575px) {
     .kg-canvas > blockquote.kg-blockquote-alt {
         font-size: 4.5rem;
