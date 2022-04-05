@@ -50,19 +50,38 @@
 
 .single-cta {
     margin-top: 4rem !important;
-    padding: 3rem;
-    border-top: 5px solid var(--brand-color);
-    border-bottom: 1px solid var(--light-gray-color);
+    padding: 4rem 6rem;
     text-align: center;
+    background-color: var(--brand-color);
+    /* border-radius: 6px; */
+    color: var(--lighter-gray-color);
+}
+
+.single-cta .button-text {
+    color: var(--lighter-gray-color);
 }
 
 .single-cta-title {
+    color: var(--lighter-gray-color);
+    margin: 0 0 1rem;
+}
+
+.has-serif-title .single-cta-title {
+    font-family: var(--font-serif);
+}
+
+.single-cta-desc {
     margin: 0 0 3rem !important;
+}
+
+.has-serif-body .single-cta-desc {
+    font-family: var(--font-serif);
 }
 
 .single-cta-button {
     margin-bottom: 1rem;
     font-weight: 800 !important;
+    font-size: 1.4rem;
 }
 
 .single-cta-footer {
