@@ -22,7 +22,13 @@
         </nav>
 
         <div class="header-actions">
+            
             <div class="social">
+                <a class="social-item social-item-facebook"
+                    href="#/search"
+                    aria-label="Search">
+                    {{> icons/search}}
+                </a>
                 {{#if @site.facebook}}
                     <a class="social-item social-item-facebook"
                         href="{{facebook_url @site.facebook}}" target="_blank"
